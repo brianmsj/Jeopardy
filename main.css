@@ -1,0 +1,16 @@
+
+
+td {
+  border: 5px solid black;
+}
+table {
+  border: 10px solid black;
+  margin: auto;
+  background-color: #060CE9;
+}
+tr {
+  height: 150px;
+}
+td {
+  width: 220px;
+}
