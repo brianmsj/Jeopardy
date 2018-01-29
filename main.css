@@ -6,11 +6,14 @@ td {
 table {
   border: 10px solid black;
   margin: auto;
-  background-color: #060CE9;
 }
 tr {
   height: 150px;
 }
 td {
   width: 220px;
+  background-color: #060CE9;
+}
+.red {
+  background-color: red;
 }
