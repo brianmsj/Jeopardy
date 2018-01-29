@@ -14,6 +14,9 @@ td {
   width: 220px;
   background-color: #0f2785;
 }
+.dollar {
+  width: 100%;
+}
 .red {
   background-color: red;
 }

@@ -1,6 +1,7 @@
 
 
 const state = {
+
   board1: ['$200.jpg','$200.jpg','$200.jpg','$200.jpg','$200.jpg','$200.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$600.jpg','$600.jpg','$600.jpg',
   '$600.jpg','$600.jpg','$600.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg'],
   board2: [400,400,400,400,400,400,600,600,600,600,600,600,1200,1200,1200,1200,1200,1200,1600,1600,1600,1600,1600,2000,2000,2000,2000,2000],
@@ -13,7 +14,11 @@ const state = {
               "As minister to this nation, Marshall became an American hero for refusing the demands made in the XYZ Affair","She's a suspenseful contemporary novelist:MHC","Although called a toad, this North American animal is actually a lizard that feeds mainly on ants",
               "Malmo Stadion","In 1990 he rode with the Dallas Cowboys to NFC honors","This capital near the center of the Balkans region was named for a church",
               "Marshall's first major case, Marbury v. him, established the court's right to review federal laws","A fashion designer, nee Halfin: DVF","This snake can range in size from the 23-inch ant-hill species to the reticulated, which may reach 33 feet","Estadio Presidente Peron","This hoodied genius was named in 2007 for the Patriots",
-              "It's the 2-word chemical name for table salt; pass it around!"]
+              "It's the 2-word chemical name for table salt; pass it around!"],
+  answers1: ["The Constitution","Grant","North Carolina","North Korea","Vince Lombardi","A Society","Aaron Burr","John Wilkes Booth","A Tortoise","Italy","Mike Ditka","A Solarium","Jefferson",
+                "Bach","A Komodo Dragon","Mexico","Don Shula","Sonatas","France","Mary Higgins Clark","A Horned Toad","Sweden","Jimmy Johnson","Sophia","Madison","Diane van Fursenberg",
+              "Python","Argentina","Bill Bellichick","Sodium Chloride"]
+  categories1: ["John Marshall","Monogram Madness","Reptiles","Stadiums By Country","NFL Coach of the Year","So What!"]
 
 }
 
