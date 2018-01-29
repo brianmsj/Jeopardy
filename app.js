@@ -1,7 +1,8 @@
 
 
 const state = {
-  board1: [200,200,200,200,200,200,400,400,400,400,400,400,600,600,600,600,600,600,800,800,800,800,800,800,1000,1000,1000,1000,1000,1000],
+  board1: ['$200.jpg','$200.jpg','$200.jpg','$200.jpg','$200.jpg','$200.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$600.jpg','$600.jpg','$600.jpg',
+  '$600.jpg','$600.jpg','$600.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg'],
   board2: [400,400,400,400,400,400,600,600,600,600,600,600,1200,1200,1200,1200,1200,1200,1600,1600,1600,1600,1600,2000,2000,2000,2000,2000],
   questions1: ["Purple Skinned Edible is the Start Ingredient of Baba Ghanoush","A US president USG","The American alligator can be found from Texas to as far east & north as this Tar Heel State",
               "Kim Il-Sung Stadium","In 1959 he took the honor as leader of the Green Bay Packers","It's an organized group or association, like the Red Hat or Humane",
@@ -22,7 +23,7 @@ function populateBoardBoardOne(state) {
     id = id.toString();
     var selector = '#'+id;
     id++
-    $(selector).html(state.board1[i]);
+    $(selector).children().attr('src',state.board1[i]);
   }
 }
 function getQuestion(state,id) {
@@ -34,7 +35,7 @@ function getQuestion(state,id) {
   }
   $('#'+id).empty();
   $('#'+id).html(question);
-  
+
 }
 
 function eventListeners() {
