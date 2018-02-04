@@ -4,7 +4,8 @@ const state = {
 
   board1: ['$200.jpg','$200.jpg','$200.jpg','$200.jpg','$200.jpg','$200.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$600.jpg','$600.jpg','$600.jpg',
   '$600.jpg','$600.jpg','$600.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$800.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg','$1000.jpg'],
-  board2: [400,400,400,400,400,400,600,600,600,600,600,600,1200,1200,1200,1200,1200,1200,1600,1600,1600,1600,1600,2000,2000,2000,2000,2000],
+  board2: ['$400.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$400.jpg','$600.jpg','$600.jpg','$600.jpg','$600.jpg','$600.jpg','$600.jpg','$1200.jpg','$1200.jpg','$1200.jpg','$1200.jpg','$1200.jpg','$1200.jpg'
+  ,'$1600.jpg','$1600.jpg','$1600.jpg','$1600.jpg','$1600.jpg','$1600.jpg','$2000.jpg','$2000.jpg','$2000.jpg','$2000.jpg','$2000.jpg','$2000.jpg'],
   questions1: ["Purple Skinned Edible is the Start Ingredient of Baba Ghanoush","A US president USG","The American alligator can be found from Texas to as far east & north as this Tar Heel State",
               "Kim Il-Sung Stadium","In 1959 he took the honor as leader of the Green Bay Packers","It's an organized group or association, like the Red Hat or Humane",
               "In 1807 Marshall presided over the treason trial of this man","A presidential assassin: JWB","Being terrestrial, the cape speckled padloper isn't called a turtle, but this",
@@ -17,9 +18,16 @@ const state = {
               "It's the 2-word chemical name for table salt; pass it around!"],
   answers1: ["The Constitution","Grant","North Carolina","North Korea","Vince Lombardi","A Society","Aaron Burr","John Wilkes Booth","A Tortoise","Italy","Mike Ditka","A Solarium","Jefferson",
                 "Bach","A Komodo Dragon","Mexico","Don Shula","Sonatas","France","Mary Higgins Clark","A Horned Toad","Sweden","Jimmy Johnson","Sophia","Madison","Diane van Fursenberg",
-              "Python","Argentina","Bill Bellichick","Sodium Chloride"]
+              "Python","Argentina","Bill Bellichick","Sodium Chloride"],
   categories1: ["John Marshall","Monogram Madness","Reptiles","Stadiums By Country","NFL Coach of the Year","So What!"]
 
+}
+
+function displayQuestion(question) {
+  $('.overlay').toggle('hidden')
+  $('.overlay').append('<p>'+ question + '</p>' + '<label>What is?</label><input></input>' + '<button>Guess</button>'
+
+);
 }
 
 function populateBoardBoardOne(state) {
@@ -35,23 +43,26 @@ function getQuestion(state,id) {
   var currentSquareId = id
   var question;
   for(let i=0;i<state.questions1.length;i++) {
-    question = state.questions1[currentSquareId-1]
-    console.log(question)
+    question = state.questions1[currentSquareId-1].toUpperCase();
   }
   $('#'+id).empty();
   $('#'+id).html(question);
+  displayQuestion(question);
 
 }
 
+
 function eventListeners() {
- $('.green-button').click(function(event) {
+ $(document).ready(function(event) {
    populateBoardBoardOne(state)
  })
  $('.cell').click(function(event) {
     let id = event.currentTarget.id
     getQuestion(state,id);
   })
-
+ $('.overlay').click(function(event) {
+    $('.overlay').toggle('hidden');
+ })
  $('.reset').click(function(event) {
    location.reload()
  })

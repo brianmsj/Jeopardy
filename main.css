@@ -6,12 +6,13 @@ td {
 table {
   border: 10px solid black;
   margin: auto;
+  height: 80%;
+  width: 100%;
+  position: fixed;
 }
 tr {
-  height: 150px;
 }
 td {
-  width: 220px;
   background-color: #0f2785;
 }
 .dollar {
@@ -19,4 +20,25 @@ td {
 }
 .red {
   background-color: red;
+}
+.cell {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+}
+.overlay {
+  background-color: #0f2785;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-size: 76px;
+  font-weight: bold;
+  
+
+}
+.hidden {
+  display: none;
 }
